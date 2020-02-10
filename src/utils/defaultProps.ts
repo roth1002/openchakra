@@ -82,6 +82,8 @@ import {
   Flex,
   GridProps,
   Grid,
+  Slider,
+  SliderProps,
 } from '@chakra-ui/core'
 import FormLabel, { FormLabelProps } from '@chakra-ui/core/dist/FormLabel'
 
@@ -153,6 +155,11 @@ type PreviewDefaultProps = {
   FormControlMeta?: any
   AccordionMeta?: any
   ListMeta?: any
+  Slider?: SliderProps
+  SliderTrack?: any
+  SliderFilledTrack?: any
+  SliderThumb?: Omit<any, 'children'>
+  SliderMeta?: any
 }
 
 export const DEFAULT_PROPS: PreviewDefaultProps = {
@@ -261,6 +268,7 @@ export const DEFAULT_PROPS: PreviewDefaultProps = {
   Radio: { ...Radio.defaultProps, children: 'Radio' },
   RadioGroup: { ...RadioGroup.defaultProps },
   Select: { ...Select.defaultProps, variant: 'outline', size: 'md' },
+  Slider: { ...Slider.defaultProps },
   List: { ...List.defaultProps, styleType: 'none' },
   ListIcon: { ...ListIcon.defaultProps },
   ListItem: { ...ListItem.defaultProps, children: 'list' },

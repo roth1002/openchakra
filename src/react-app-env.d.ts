@@ -54,6 +54,10 @@ type ComponentType =
   | 'Radio'
   | 'RadioGroup'
   | 'Select'
+  | 'Slider'
+  | 'SliderTrack'
+  | 'SliderFilledTrack'
+  | 'SliderThumb'
   | 'List'
   | 'ListItem'
   | 'ListIcon'
@@ -68,6 +72,7 @@ type ComponentType =
   | 'AccordionMeta'
   | 'ListMeta'
   | 'AlertMeta'
+  | 'SliderMeta'
   | 'InputGroupMeta'
   | 'Grid'
 

@@ -24,6 +24,21 @@ export const buildAlert = (parent: string): ComposedComponent => {
   }
 }
 
+export const buildSlider = (parent: string): ComposedComponent => {
+  const composer = new Composer()
+  const nodeId = composer.addNode('Slider')
+  composer.addNode('SliderTrack', nodeId)
+  composer.addNode('SliderFilledTrack', nodeId)
+  composer.addNode('SliderThumb', nodeId)
+  const components = composer.getComponents()
+
+  return {
+    components,
+    root: nodeId,
+    parent,
+  }
+}
+
 export const buildFormControl = (parent: string): ComposedComponent => {
   const composer = new Composer()
 
@@ -108,6 +123,7 @@ const builders: ComposerBuilders = {
   AccordionMeta: buildAccordion,
   ListMeta: buildList,
   InputGroupMeta: buildInputGroup,
+  SliderMeta: buildSlider,
 }
 
 export default builders

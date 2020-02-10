@@ -37,6 +37,10 @@ export const COMPONENTS: ComponentType[] = [
   'SimpleGrid',
   'Spinner',
   'Select',
+  'Slider',
+  'SliderTrack',
+  'SliderFilledTrack',
+  'SliderThumb',
   'Stack',
   'Switch',
   'Tag',
@@ -77,4 +81,5 @@ export const rootComponents = COMPONENTS
     'AccordionMeta',
     'ListMeta',
     'InputGroupMeta',
+    'SliderMeta',
   ])

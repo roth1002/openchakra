@@ -44,6 +44,7 @@ import FormLabelPanel from './components/FormLabelPanel'
 import FormHelperTextPanel from './components/FormHelperTextPanel'
 import FormErrorMessagePanel from './components/FormErrorMessagePanel'
 import GridPanel from './components/GridPanel'
+import SliderPanel from './components/SliderPanel'
 
 const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
   const { type } = component
@@ -96,6 +97,7 @@ const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
       {type === 'InputRightAddon' && <ChildrenControl />}
       {type === 'InputLeftAddon' && <ChildrenControl />}
       {type === 'Grid' && <GridPanel />}
+      {type === 'Slider' && <SliderPanel />}
     </>
   )
 }

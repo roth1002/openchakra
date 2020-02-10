@@ -23,6 +23,11 @@ import InputLeftAddonPreview from './previews/InputLeftAddonPreview'
 import InputRightAddonPreview from './previews/InputRightAddonPreview'
 import { getComponentBy } from '../../core/selectors/components'
 import WithBoxRefSimplePreviewContainer from './WithRefSimplePreviewContainer'
+import SliderPreview, {
+  SliderTrackPreview,
+  SliderFilledTrackPreview,
+  SliderThumbPreview,
+} from './previews/SliderPreview'
 
 const ComponentPreview: React.FC<{
   componentName: string
@@ -124,6 +129,14 @@ const ComponentPreview: React.FC<{
       return <InputLeftAddonPreview component={component} />
     case 'InputRightAddon':
       return <InputRightAddonPreview component={component} />
+    case 'Slider':
+      return <SliderPreview component={component} />
+    case 'SliderTrack':
+      return <SliderTrackPreview component={component} />
+    case 'SliderFilledTrack':
+      return <SliderFilledTrackPreview component={component} />
+    case 'SliderThumb':
+      return <SliderThumbPreview component={component} />
 
     default:
       return null

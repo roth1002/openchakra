@@ -95,6 +95,14 @@ const menuItems: MenuItems = {
   SimpleGrid: {},
   Spinner: {},
   Select: {},
+  Slider: {
+    children: {
+      Slider: {},
+      SliderTrack: {},
+      SliderFilledTrack: {},
+      SliderThumb: {},
+    },
+  },
   Stack: {},
   Switch: {},
   Tag: {},
