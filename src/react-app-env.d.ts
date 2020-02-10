@@ -75,6 +75,7 @@ type ComponentType =
   | 'SliderMeta'
   | 'InputGroupMeta'
   | 'Grid'
+  | 'NumberInput'
 
 interface IComponent {
   children: string[]

@@ -89,6 +89,7 @@ const menuItems: MenuItems = {
       ListItem: {},
     },
   },
+  NumberInput: {},
   Progress: {},
   Radio: {},
   RadioGroup: {
@@ -114,7 +115,6 @@ const menuItems: MenuItems = {
   Breadcrumb: { soon: true },
   Editable: { soon: true },
   Menu: { soon: true },
-  NumberInput: { soon: true },
   Tab: { soon: true },
   /*"Tabs",
   "TabList",

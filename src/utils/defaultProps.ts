@@ -81,6 +81,7 @@ import {
   Flex,
   GridProps,
   Grid,
+  NumberInput,
   Slider,
   SliderProps,
 } from '@chakra-ui/core'
@@ -287,4 +288,7 @@ export const DEFAULT_PROPS: PreviewDefaultProps = {
   },
   Stack: { ...Stack.defaultProps },
   Flex: { ...Flex.defaultProps, display: 'flex' },
+  NumberInput: {
+    ...NumberInput.defaultProps,
+  },
 }

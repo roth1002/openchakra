@@ -65,6 +65,7 @@ const ComponentPreview: React.FC<{
     case 'SliderTrack':
     case 'SliderFilledTrack':
     case 'SliderThumb':
+    case 'NumberInput':
       return (
         <SimplePreviewContainer component={component} type={Chakra[type]} />
       )
