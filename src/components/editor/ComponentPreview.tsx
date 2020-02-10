@@ -23,6 +23,8 @@ import InputLeftAddonPreview from './previews/InputLeftAddonPreview'
 import InputRightAddonPreview from './previews/InputRightAddonPreview'
 import { getComponentBy } from '../../core/selectors/components'
 import WithBoxRefSimplePreviewContainer from './WithRefSimplePreviewContainer'
+import { InputRightElementPreview } from './previews/InputRightElement'
+import { InputLeftElementPreview } from './previews/InputLeftElement'
 
 const ComponentPreview: React.FC<{
   componentName: string
@@ -86,6 +88,15 @@ const ComponentPreview: React.FC<{
     case 'AccordionItem':
     case 'FormControl':
     case 'Tabs':
+    case 'List':
+      return (
+        <WithChildrenPreviewContainer
+          enableVisualHelper
+          component={component}
+          type={Chakra[type]}
+        />
+      )
+    // Components with childrens
     case 'TabList':
     case 'TabPanels':
     case 'InputLeftElement':
@@ -100,6 +111,10 @@ const ComponentPreview: React.FC<{
         />
       )
     // More complex components
+    case 'InputRightElement':
+      return <InputRightElementPreview component={component} />
+    case 'InputLeftElement':
+      return <InputLeftElementPreview component={component} />
     case 'Avatar':
       return <AvatarPreview component={component} />
     case 'AvatarBadge':
