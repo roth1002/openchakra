@@ -12,6 +12,8 @@ import AvatarPreview, {
 import StackPreview from './previews/StackPreview'
 import AccordionPreview, {
   AccordionHeaderPreview,
+  AccordionItemPreview,
+  AccordionPanelPreview,
 } from './previews/AccordionPreview'
 import { RadioGroupPreview } from './previews/RadioPreview'
 import SelectPreview from './previews/SelectPreview'
@@ -84,8 +86,6 @@ const ComponentPreview: React.FC<{
     case 'Box':
     case 'SimpleGrid':
     case 'Flex':
-    case 'AccordionPanel':
-    case 'AccordionItem':
     case 'FormControl':
     case 'Tabs':
     case 'List':
@@ -136,7 +136,10 @@ const ComponentPreview: React.FC<{
       return <InputLeftAddonPreview component={component} />
     case 'InputRightAddon':
       return <InputRightAddonPreview component={component} />
-
+    case 'AccordionItem':
+      return <AccordionItemPreview component={component} />
+    case 'AccordionPanel':
+      return <AccordionPanelPreview component={component} />
     default:
       return null
   }
