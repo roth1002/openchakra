@@ -136,6 +136,7 @@ const ComponentPreview: React.FC<{
       return <InputLeftAddonPreview component={component} />
     case 'InputRightAddon':
       return <InputRightAddonPreview component={component} />
+
     default:
       return null
   }
