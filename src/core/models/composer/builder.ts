@@ -26,16 +26,32 @@ export const buildAlert = (parent: string): ComposedComponent => {
 
 export const buildFormControl = (parent: string): ComposedComponent => {
   const composer = new Composer()
-
   const nodeId = composer.addNode('FormControl')
-
   composer.addNode('FormLabel', nodeId)
   composer.addNode('Input', nodeId)
   composer.addNode('FormHelperText', nodeId)
   composer.addNode('FormErrorMessage', nodeId)
-
   const components = composer.getComponents()
+  return {
+    components,
+    root: nodeId,
+    parent,
+  }
+}
 
+export const buildPopover = (parent: string): ComposedComponent => {
+  const composer = new Composer()
+  const nodeId = composer.addNode('Popover')
+  const tiggerId = composer.addNode('PopoverTrigger', nodeId)
+  composer.addNode('Button', tiggerId)
+  const contentId = composer.addNode('PopoverContent', nodeId)
+  composer.addNode('PopoverHeader', contentId)
+  composer.addNode('PopoverBody', contentId)
+  composer.addNode('PopoverArrow', contentId)
+  composer.addNode('PopoverCloseButton', contentId)
+  composer.addNode('PopoverFooter', contentId)
+  const components = composer.getComponents()
+  console.log(components)
   return {
     components,
     root: nodeId,
@@ -45,7 +61,6 @@ export const buildFormControl = (parent: string): ComposedComponent => {
 
 export const buildAccordion = (parent: string): ComposedComponent => {
   const composer = new Composer('Accordion')
-
   const nodeId = composer.addNode('Accordion')
   const itemId = composer.addNode('AccordionItem', nodeId)
   const headerId = composer.addNode('AccordionHeader', itemId)
@@ -110,6 +125,7 @@ const builders: ComposerBuilders = {
   AccordionMeta: buildAccordion,
   ListMeta: buildList,
   InputGroupMeta: buildInputGroup,
+  PopoverMeta: buildPopover,
 }
 
 export default builders

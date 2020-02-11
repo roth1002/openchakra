@@ -55,12 +55,21 @@ export const COMPONENTS: ComponentType[] = [
   'AccordionIcon',
   'InputRightElement',
   'InputLeftElement',
+  'Popover',
+  'PopoverTrigger',
+  'PopoverContent',
+  'PopoverHeader',
+  'PopoverBody',
+  'PopoverArrow',
+  'PopoverCloseButton',
+  'PopoverFooter',
   // Allow meta components
   'AlertMeta',
   'FormControlMeta',
   'AccordionMeta',
   'ListMeta',
   'InputGroupMeta',
+  'PopoverMeta',
 ]
 
 export const rootComponents = COMPONENTS
@@ -75,5 +84,11 @@ export const rootComponents = COMPONENTS
         'AccordionHeader',
         'AccordionPanel',
         'AccordionIcon',
+        'Popover',
+        'PopoverTrigger',
+        'PopoverContent',
+        'PopoverHeader',
+        'PopoverBody',
+        'PopoverFooter',
       ].includes(name),
   )

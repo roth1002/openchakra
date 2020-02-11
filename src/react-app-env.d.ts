@@ -71,6 +71,15 @@ type ComponentType =
   | 'InputGroupMeta'
   | 'Grid'
   | 'NumberInput'
+  | 'Popover'
+  | 'PopoverTrigger'
+  | 'PopoverContent'
+  | 'PopoverHeader'
+  | 'PopoverBody'
+  | 'PopoverArrow'
+  | 'PopoverCloseButton'
+  | 'PopoverFooter'
+  | 'PopoverMeta'
 
 interface IComponent {
   children: string[]

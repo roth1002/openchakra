@@ -45,6 +45,7 @@ import FormHelperTextPanel from './components/FormHelperTextPanel'
 import FormErrorMessagePanel from './components/FormErrorMessagePanel'
 import GridPanel from './components/GridPanel'
 import NumberInputPanel from './components/NumberInputPanel'
+import PopoverPanel from './components/PopoverPanel'
 
 const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
   const { type } = component
@@ -98,6 +99,7 @@ const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
       {type === 'InputLeftAddon' && <ChildrenControl />}
       {type === 'Grid' && <GridPanel />}
       {type === 'NumberInput' && <NumberInputPanel />}
+      {type === 'Popover' && <PopoverPanel />}
     </>
   )
 }

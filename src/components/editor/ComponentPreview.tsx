@@ -23,6 +23,7 @@ import WithChildrenPreviewContainer from './WithChildrenPreviewContainer'
 import InputGroupPreview from './previews/InputGroupPreview'
 import InputLeftAddonPreview from './previews/InputLeftAddonPreview'
 import InputRightAddonPreview from './previews/InputRightAddonPreview'
+import PopoverTriggerPreview from './previews/PopoverTriggerPreview'
 import { getComponentBy } from '../../core/selectors/components'
 import WithBoxRefSimplePreviewContainer from './WithRefSimplePreviewContainer'
 import { InputRightElementPreview } from './previews/InputRightElement'
@@ -63,6 +64,9 @@ const ComponentPreview: React.FC<{
     case 'Radio':
     case 'ListItem':
     case 'NumberInput':
+    case 'PopoverHeader':
+    case 'PopoverArrow':
+    case 'PopoverCloseButton':
       return (
         <SimplePreviewContainer component={component} type={Chakra[type]} />
       )
@@ -90,6 +94,10 @@ const ComponentPreview: React.FC<{
     case 'TabList':
     case 'TabPanels':
     case 'Grid':
+    case 'Popover':
+    case 'PopoverBody':
+    case 'PopoverContent':
+    case 'PopoverFooter':
       return (
         <WithChildrenPreviewContainer
           enableVisualHelper
@@ -134,6 +142,8 @@ const ComponentPreview: React.FC<{
       return <AccordionItemPreview component={component} />
     case 'AccordionPanel':
       return <AccordionPanelPreview component={component} />
+    case 'PopoverTrigger':
+      return <PopoverTriggerPreview component={component} />
     default:
       return null
   }
