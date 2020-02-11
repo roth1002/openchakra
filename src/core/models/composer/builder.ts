@@ -51,7 +51,6 @@ export const buildPopover = (parent: string): ComposedComponent => {
   composer.addNode('PopoverCloseButton', contentId)
   composer.addNode('PopoverFooter', contentId)
   const components = composer.getComponents()
-  console.log(components)
   return {
     components,
     root: nodeId,
