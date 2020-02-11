@@ -46,6 +46,10 @@ import FormErrorMessagePanel from './components/FormErrorMessagePanel'
 import GridPanel from './components/GridPanel'
 import NumberInputPanel from './components/NumberInputPanel'
 import AspectRatioPanel from './components/AspectRatioPanel'
+import MenuPanel from './components/MenuPanel'
+import MenuOptionGroupPanel from './components/MenuOptionGroupPanel'
+import MenuItemPanel from './components/MenuItemPanel'
+import MenuItemOptionPanel from './components/MenuItemOptionPanel'
 
 const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
   const { type } = component
@@ -100,6 +104,10 @@ const Panels: React.FC<{ component: IComponent }> = ({ component }) => {
       {type === 'Grid' && <GridPanel />}
       {type === 'NumberInput' && <NumberInputPanel />}
       {type === 'AspectRatioBox' && <AspectRatioPanel />}
+      {type === 'Menu' && <MenuPanel />}
+      {type === 'MenuOptionGroup' && <MenuOptionGroupPanel />}
+      {type === 'MenuItem' && <MenuItemPanel />}
+      {type === 'MenuItemOption' && <MenuItemOptionPanel />}
     </>
   )
 }

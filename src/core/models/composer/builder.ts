@@ -64,6 +64,24 @@ export const buildAccordion = (parent: string): ComposedComponent => {
   }
 }
 
+export const buildMenu = (parent: string): ComposedComponent => {
+  const composer = new Composer('Menu')
+  const nodeId = composer.addNode('Menu', parent)
+  composer.addNode('MenuButton', nodeId)
+  const listId = composer.addNode('MenuList', nodeId)
+  composer.addNode('MenuGroup', listId)
+  composer.addNode('MenuDivider', listId)
+  composer.addNode('MenuItem', listId)
+  const optionId = composer.addNode('MenuOptionGroup', listId)
+  composer.addNode('MenuItemOption', optionId)
+  const components = composer.getComponents()
+  return {
+    components,
+    root: nodeId,
+    parent,
+  }
+}
+
 export const buildList = (parent: string): ComposedComponent => {
   const composer = new Composer('List')
 
@@ -110,6 +128,7 @@ const builders: ComposerBuilders = {
   AccordionMeta: buildAccordion,
   ListMeta: buildList,
   InputGroupMeta: buildInputGroup,
+  MenuMeta: buildMenu,
 }
 
 export default builders

@@ -63,6 +63,9 @@ const ComponentPreview: React.FC<{
     case 'Radio':
     case 'ListItem':
     case 'NumberInput':
+    case 'MenuItem':
+    case 'MenuDivider':
+    case 'MenuItemOption':
       return (
         <SimplePreviewContainer component={component} type={Chakra[type]} />
       )
@@ -91,6 +94,11 @@ const ComponentPreview: React.FC<{
     case 'TabList':
     case 'TabPanels':
     case 'Grid':
+    case 'Menu':
+    case 'MenuButton':
+    case 'MenuList':
+    case 'MenuGroup':
+    case 'MenuOptionGroup':
       return (
         <WithChildrenPreviewContainer
           enableVisualHelper

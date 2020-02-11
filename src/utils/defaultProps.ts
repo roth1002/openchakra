@@ -61,7 +61,6 @@ import {
   AspectRatioBoxProps,
   BreadcrumbItemProps,
   EditableProps,
-  MenuProps,
   NumberInputProps,
   RadioProps,
   SelectProps,
@@ -83,6 +82,14 @@ import {
   Grid,
   NumberInput,
   AspectRatioBox,
+  Menu,
+  MenuList,
+  MenuButton,
+  MenuItem,
+  MenuGroup,
+  MenuDivider,
+  MenuOptionGroup,
+  MenuItemOption,
 } from '@chakra-ui/core'
 import FormLabel, { FormLabelProps } from '@chakra-ui/core/dist/FormLabel'
 
@@ -141,7 +148,15 @@ type PreviewDefaultProps = {
   AspectRatioBox?: AspectRatioBoxProps
   Breadcrumb?: BreadcrumbItemProps
   Editable?: EditableProps
-  Menu?: MenuProps
+  Menu?: any
+  MenuList?: any
+  MenuButton?: any
+  MenuItem?: any
+  MenuGroup?: any
+  MenuDivider?: any
+  MenuOptionGroup?: any
+  MenuItemOption?: any
+
   NumberInput?: NumberInputProps
   Radio?: RadioProps
   RadioGroup?: RadioGroupProps
@@ -154,6 +169,7 @@ type PreviewDefaultProps = {
   FormControlMeta?: any
   AccordionMeta?: any
   ListMeta?: any
+  MenuMeta?: any
 }
 
 export const DEFAULT_PROPS: PreviewDefaultProps = {
@@ -286,5 +302,32 @@ export const DEFAULT_PROPS: PreviewDefaultProps = {
   },
   AspectRatioBox: {
     ...AspectRatioBox.defaultProps,
+  },
+  Menu: {
+    ...Menu.defaultProps,
+  },
+  MenuList: {
+    ...MenuList.defaultProps,
+  },
+  MenuButton: {
+    ...MenuButton.defaultProps,
+    children: 'Lorem Ipsum',
+  },
+  MenuItem: {
+    ...MenuItem.defaultProps,
+    children: 'Lorem Ipsum',
+  },
+  MenuGroup: {
+    ...MenuGroup.defaultProps,
+  },
+  MenuDivider: {
+    ...MenuDivider.defaultProps,
+  },
+  MenuOptionGroup: {
+    ...MenuOptionGroup.defaultProps,
+  },
+  MenuItemOption: {
+    ...MenuItemOption.defaultProps,
+    children: 'Lorem Ipsum',
   },
 }

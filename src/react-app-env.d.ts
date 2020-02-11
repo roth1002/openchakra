@@ -49,7 +49,6 @@ type ComponentType =
   | 'Tabs'
   | 'Code'
   | 'Editable'
-  | 'Menu'
   | 'NumberInput'
   | 'Radio'
   | 'RadioGroup'
@@ -71,6 +70,15 @@ type ComponentType =
   | 'InputGroupMeta'
   | 'Grid'
   | 'NumberInput'
+  | 'Menu'
+  | 'MenuList'
+  | 'MenuButton'
+  | 'MenuItem'
+  | 'MenuGroup'
+  | 'MenuDivider'
+  | 'MenuOptionGroup'
+  | 'MenuItemOption'
+  | 'MenuMeta'
 
 interface IComponent {
   children: string[]
