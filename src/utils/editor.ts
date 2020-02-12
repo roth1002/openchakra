@@ -47,6 +47,10 @@ export const COMPONENTS: ComponentType[] = [
   'Text',
   'Textarea',
   'Tab',
+  'TabList',
+  'TabPanels',
+  'Tabs',
+  'TabPanel',
   'Accordion',
   'Editable',
   'AspectRatioBox',
@@ -68,6 +72,7 @@ export const COMPONENTS: ComponentType[] = [
   'ListMeta',
   'InputGroupMeta',
   'BreadcrumbMeta',
+  'TabsMeta',
 ]
 
 export const AccordionWhitelist: ComponentType[] = COMPONENTS.filter(

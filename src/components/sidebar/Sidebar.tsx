@@ -106,15 +106,18 @@ const menuItems: MenuItems = {
   Select: {},
   Stack: {},
   Switch: {},
+  Tabs: {
+    children: {
+      Tab: {},
+      TabList: {},
+      TabPanel: {},
+      TabPanels: {},
+    },
+  },
   Tag: {},
   Text: {},
   Textarea: {},
   Menu: { soon: true },
-  Tab: { soon: true },
-  /*"Tabs",
-  "TabList",
-  "TabPanel",
-  "TabPanels"*/
 }
 
 const Menu = () => {

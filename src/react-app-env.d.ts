@@ -74,6 +74,7 @@ type ComponentType =
   | 'BreadcrumbItem'
   | 'BreadcrumbLink'
   | 'BreadcrumbMeta'
+  | 'TabsMeta'
 
 interface IComponent {
   children: string[]
