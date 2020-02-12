@@ -18,7 +18,6 @@ export const useInteractive = (
   })
 
   const ref = useRef<HTMLDivElement>(null)
-
   let props = {
     ...component.props,
     onMouseOver: (event: MouseEvent) => {
@@ -32,6 +31,7 @@ export const useInteractive = (
       event.preventDefault()
       event.stopPropagation()
       dispatch.components.select(component.id)
+      dispatch.app.toggleInputText()
     },
   }
 
